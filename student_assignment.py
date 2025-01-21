@@ -120,7 +120,7 @@ def generate_hw03(question2, question3):
     config = {'configurable': {'session_id': 'hw03'}}
 
     agent_with_history.invoke({'input': question2}, config = config)
-    response = agent_with_chat_history.invoke(
+    response = agent_with_history.invoke(
         {'input': question3 + '是否需要將節日新增到節日清單中。' +
         '根據問題判斷該節日是否存在於清單中，如果不存在，則為 true；否則為 false' +
         '，並描述為什麼需要或不需要新增節日，具體說明是否該節日已經存在於清單中，以及當前清單的內容' +
@@ -163,5 +163,5 @@ def demo(question):
 
 # print(generate_hw01('2024年台灣10月紀念日有哪些?'))
 # print(generate_hw02('2024年台灣10月紀念日有哪些?'))
-# print(generate_hw03('2024年台灣10月紀念日有哪些?', '根據先前的節日清單，這個節日{"date": "10-31", "name": "蔣公誕辰紀念日"}是否有在該月份清單？'))
-print(generate_hw04('請問日本的積分是多少'))
+print(generate_hw03('2024年台灣10月紀念日有哪些?', '根據先前的節日清單，這個節日{"date": "10-31", "name": "蔣公誕辰紀念日"}是否有在該月份清單？'))
+# print(generate_hw04('請問日本的積分是多少'))
